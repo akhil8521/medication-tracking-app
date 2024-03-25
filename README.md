@@ -76,3 +76,33 @@ Scripts for managing the PostgreSQL database, including migrations and backups, 
 
 Monitoring is configured to use Azure Application Insights for real-time performance monitoring.
 
+## Future Improvements
+
+Sure, here are the improvement points to add to the `README.md` for the AugMend Health medication tracking application:
+
+## Future Improvements
+
+### CI/CD Enhancements
+
+- **Blue/Green Deployments**: Implement blue/green deployment strategies to reduce downtime and risk by running two identical production environments. Only one hosts live traffic at any time.
+- **Canary Releases**: Gradually roll out changes to a small subset of users before making them available to everyone. This approach helps in identifying issues early without affecting all users.
+
+### Infrastructure as Code (IaC) Improvements
+
+- **Terraform State Management**: Enhance Terraform state management by implementing state locking and using state backends like Azure Blob Storage to improve team collaboration and prevent conflicts.
+- **Modular Terraform Configurations**: Refactor Terraform configurations into modules to enable reusable, composable, and maintainable infrastructure code.
+
+### Security Upgrades
+
+- **Regular Dependency Scanning**: Integrate automated dependency scanning in the CI pipeline to detect vulnerabilities in third-party libraries and frameworks early in the development lifecycle.
+- **Enhanced Key Vault Integration**: Automate the rotation of secrets and keys stored in Azure Key Vault, reducing the risk associated with static credentials.
+
+### Monitoring and Observability
+
+- **Advanced Application Insights Usage**: Leverage Application Insights for more than basic metrics; set up custom telemetry to gain deeper insights into application behavior and user experiences.
+- **Centralized Log Management**: Implement a centralized log management solution that aggregates logs across all services and infrastructure for quicker troubleshooting and analysis.
+
+### Database Management and Performance
+
+- **Database Performance Monitoring**: Implement more detailed monitoring of database performance metrics, such as query execution times, index usage, and I/O operations.
+- **Read Replicas for Scalability**: Use read replicas to offload read-heavy workloads from the primary database server, improving application performance and user experience.

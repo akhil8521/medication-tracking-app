@@ -52,7 +52,7 @@ jobs:
         environment: ['Development', 'Staging', 'Production']
     
     environment:
-      name: ${{ matrix.environment }}
+      name: Production # Currently only Pointing to Production Environment # ${{ matrix.environment }}
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}  
     permissions:
       id-token: write 
@@ -79,5 +79,5 @@ jobs:
         id: deploy-to-webapp
         with:
           app-name: augmend
-          slot-name: ${{ matrix.environment }}
+          slot-name: Production # Currently only Pointing to Production Environment # ${{ matrix.environment }}
           
